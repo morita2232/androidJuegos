@@ -98,7 +98,7 @@ fun MainMenu(score: Int, onSelectTicTacToe: () -> Unit, onSelectCrashGame: () ->
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            "🎮 BIENVENIDO A ESTA MARAVILLOSA EXPERIENCIA 🎮",
+            "\uD83C\uDFAE\uD83D\uDC7D BIENVENIDO A ESTA MARAVILLOSA EXPERIENCIA \uD83D\uDC7D\uD83C\uDFAE",
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(16.dp),
             style = MaterialTheme.typography.headlineSmall,
@@ -152,7 +152,7 @@ fun TopBar(
 
         Spacer(modifier = Modifier.height(2.dp))
         Text(
-            text = "⏳ Tiempo: $timeLeft  |  ⭐ Puntos: $score",
+            text = "\u23F3 Tiempo: $timeLeft  |  \u2B50 Puntos: $score",
             color = MaterialTheme.colorScheme.onPrimaryContainer,
             style = MaterialTheme.typography.labelMedium
         )
@@ -283,7 +283,7 @@ fun CrashGame(currentScore: Int, onScoreChange: (Int) -> Unit) {
     var statusMessage by remember { mutableStateOf("Presiona 'Apostar' para comenzar") }
 
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        Text("💥 Crash Game 💥", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
+        Text("\uD83D\uDCA5 Crash Game \uD83D\uDCA5", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
         Spacer(modifier = Modifier.height(20.dp))
         Text("Multiplicador: x${"%.2f".format(multiplier)}", fontWeight = FontWeight.Bold)
         Spacer(modifier = Modifier.height(10.dp))
@@ -324,7 +324,7 @@ fun CrashGame(currentScore: Int, onScoreChange: (Int) -> Unit) {
                 if (Random.nextFloat() < 0.12f) {
                     crashed = true
                     betting = false
-                    statusMessage = "💥 ¡Crash! Perdiste tu apuesta"
+                    statusMessage = "\uD83D\uDCA5 ¡Crash! Perdiste tu apuesta"
                 }
             }
         }
@@ -341,7 +341,7 @@ fun EndScreen(score: Int, onRestart: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            "🎉 ¡Felicidades! 🎉",
+            "\uD83C\uDF89 ¡Felicidades! \uD83C\uDF89",
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onPrimaryContainer
